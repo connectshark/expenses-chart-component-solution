@@ -1,0 +1,29 @@
+{
+  "name": "vite-template",
+  "version": "1.0.0",
+  "author": {
+    "name": "Chambers",
+    "url": "https://github.com/connectshark"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/connectshark/vite-template",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/connectshark/vite-template"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "pinia": "^2.0.23",
+    "sass": "^1.56.1",
+    "vue": "^3.2.33",
+    "vue-router": "^4.1.6"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
+    "vite": "^4.0.1"
+  }
+}
