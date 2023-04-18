@@ -3,7 +3,7 @@
 </template>
 
 
-<style lang="scss">
+<style>
 #app {
   font-family: 'Poppins', 'Noto Sans TC', sans-serif;
   text-align: center;
