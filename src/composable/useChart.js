@@ -20,6 +20,7 @@ export default function () {
           color: '#fff',
           fontSize: 16
         },
+        shape: 'square',
         formatter: function () {
           return '$' + this.y
         }
