@@ -41,12 +41,7 @@ export default function () {
         color: '#ec775f',
         borderRadius: 5,
         pointWidth: 35,
-        data: data,
-        states: {
-          hover: {
-            color: '#76b5bc'
-          }
-        }
+        data: data
       }]
     })
   }
