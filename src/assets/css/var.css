@@ -1,0 +1,18 @@
+:root {
+  --primary-red: #ec775f;
+  --primary-cyan: #76b5bc;
+
+  --neutral-dark-brown: #382314;
+
+  --neutral-medium-brown: #93867b;
+  --neutral-cream: #f8e9dd;
+  --neutral-orange: #fffaf5;
+
+  --font-family: 'DM Sans', sans-serif;
+
+  --font-size-small: 14px;
+  --font-size-normal: 18px;
+
+  --font-normal: 400;
+  --font-bold: 700;
+}
