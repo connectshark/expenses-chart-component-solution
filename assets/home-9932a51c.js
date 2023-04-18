@@ -1,1 +1,0 @@
-import{_ as e,o as t,c as s,a as o}from"./index-f66e62ab.js";const c={setup(){return{}}},a=o("h1",{class:"title"},"第一頁由此開始",-1),n=[a];function r(_,p,i,l,d,u){return t(),s("main",null,n)}const m=e(c,[["render",r]]);export{m as default};
