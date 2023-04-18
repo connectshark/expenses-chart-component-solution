@@ -1,13 +1,14 @@
-import { onBeforeUnmount, onMounted, ref } from 'vue'
+import { onBeforeUnmount, ref } from 'vue'
 import Highcharts from 'highcharts/highcharts'
 
 export default function () {
   const chart = ref('null')
 
-  const createChart = async () => {
+  const createChart = async ({ data, categories }) => {
     chart.value = Highcharts.chart('container', {
       chart: {
-        type: 'column'
+        type: 'column',
+        backgroundColor: '#fffaf5'
       },
       title: {
         text: ''
@@ -24,7 +25,7 @@ export default function () {
         }
       },
       xAxis: {
-        categories: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'],
+        categories: categories,
         lineWidth: 0
       },
       credits: {
@@ -40,7 +41,7 @@ export default function () {
         color: '#ec775f',
         borderRadius: 5,
         pointWidth: 35,
-        data: [17.45, 34.91, 52.36, 31.07, 23.39, 43.28, 25.48],
+        data: data,
         states: {
           hover: {
             color: '#76b5bc'
@@ -50,8 +51,11 @@ export default function () {
     })
   }
 
-  onMounted(createChart)
   onBeforeUnmount(async () => {
     chart.value.destroy()
   })
+
+  return {
+    createChart
+  }
 }

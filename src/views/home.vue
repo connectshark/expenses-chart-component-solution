@@ -29,9 +29,28 @@
 </template>
 
 <script setup>
+import { watch } from 'vue'
 import useChart from '../composable/useChart'
+import useFetch from '../composable/useFetch'
 
-useChart()
+
+const {
+  data
+} = useFetch()
+const {
+  createChart
+} = useChart()
+
+watch(data, arr => {
+  const currentDay = new Date().getDay()
+  const newData = arr.map(item => item.amount)
+  newData.splice(currentDay, 1, { y: newData[currentDay], color: '#76b5bc' })
+  const categories = arr.map(item => item.day)
+  createChart({
+    data: newData,
+    categories 
+  })
+})
 
 </script>
 
@@ -68,7 +87,7 @@ header {
 }
 
 .body {
-  background-color: #fff;
+  background-color: var(--neutral-orange);
   box-sizing: border-box;
   padding: 1rem 1.5rem;
   border-radius: 1rem;
